@@ -1,0 +1,91 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "description": "Demo My first API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/v1/": {
+            "get": {
+                "tags": [
+                    "Version",
+                    "V1"
+                ],
+                "summary": "Get Version",
+                "operationId": "83a378db6601b492fe164e8e1b4099a5",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "title": {
+                                                    "type": "string",
+                                                    "example": "1.0"
+                                                },
+                                                "release_date": {
+                                                    "type": "string",
+                                                    "example": "01.01.22"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/all": {
+            "get": {
+                "tags": [
+                    "Version",
+                    "V1"
+                ],
+                "summary": "Get Version",
+                "operationId": "70c4cecf8b66a0cd7d113b226ed5232c",
+                "responses": {
+                    "200": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "1.0"
+                                                    },
+                                                    "release_date": {
+                                                        "type": "string",
+                                                        "example": "01.01.22"
+                                                    },
+                                                    "meta": {
+                                                        "type": "number",
+                                                        "example": "1"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
